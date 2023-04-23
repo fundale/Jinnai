@@ -16,4 +16,16 @@ chrome.tabs.query({
 
     });
 
+    youtube.addEventListener("click", function () {
+
+        let url = tab[0].url;
+        if (url.includes("youtube.com/watch?v=")) {
+
+            let notTube = url.split("&")[0];
+            navigator.clipboard.writeText(notTube);
+
+        }
+
+    });
+
 });
