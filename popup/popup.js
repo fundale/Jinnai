@@ -9,7 +9,7 @@ chrome.tabs.query({
         if (url.includes("youtube.com/watch?v=")) {
 
             let notTube = url.split("&")[0];
-            let NexTo = `https://nextnex.com/?url=${notTube}`;
+            let NexTo = `${notTube}`; // https://nextnex.com/?url=
             navigator.clipboard.writeText(NexTo);
 
         }
